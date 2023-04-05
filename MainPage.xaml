@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+            <Picker x:Name="languagePicker" Title = "Выберите город:" FontSize="Medium" SelectedIndexChanged="PickerSelectedIndexChanged">
+                <Picker.Items>
+                    <!--<x:String>Орехово-Зуево</x:String>
+                    <x:String>Сочи</x:String>-->
+                    <!--<x:String>Мурманск</x:String>-->
+                </Picker.Items>
+            </Picker>
+            <Button Text="Узнать погоду" Command="{Binding LoadDataCommand}" />
+            <Label FontSize="Medium" Text="Данные на дату:" />
+            <Label FontSize="Medium" FontAttributes="Bold" Text="{Binding Time}" />
+            <Label FontSize="Medium" Text="Темпуратура:" />
+            <Label FontSize="Medium" FontAttributes="Bold" Text="{Binding Temperature}" />
+            <Label FontSize="Medium" Text="Скорость ветра:" />
+            <Label FontSize="Medium" FontAttributes="Bold" Text="{Binding Windspeed}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
